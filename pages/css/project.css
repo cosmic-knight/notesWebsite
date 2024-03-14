@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    margin: 0;
+    overflow-y: scroll;
+  }
+  
+  main{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .no-scrol::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .navbar ul{
+    position: fixed;
+    width: 100%;
+    list-style: none;
+    background-color: #9b7fe9;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .navbar a{
+    color: rgb(255, 252, 252);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+  }
+  
+  .navbar a:hover{
+    background-color: rgb(140, 233, 64);
+  }
+  
+  .navbar li{
+    float: left;
+  }
+  
+  .log{
+    position: fixed;
+    right: 0;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    text-align: center;
+    width: 100px;
+    height: 100%;
+    top:7%;
+    left: 0;
+    background-color: #29b1e7;
+    color: #fff;
+    box-sizing: border-box;
+    position: fixed;
+  }
+  
+  .content {
+    flex: 1;
+    box-sizing: border-box;
+    margin-left: 100px;
+    margin-top: 70px;
+    text-align: justify;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .a:hover {
+    background-color: #0099ff;
+  }
+  
+  .foot{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .foot ul{
+    list-style: none;
+    background-color: #9b7fe9;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .foot a{
+    color: rgb(255, 252, 252);
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+    text-align: center;
+  }
+  
+  .foot a:hover{
+    background-color: rgb(140, 233, 64);
+  }
+  
+  .foot li{
+    float: left;
+  }
+  
+  
+  .card{
+    width: auto;
+    background-color: #adadad;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    margin: 25px;
+  }
+  
+  .card:hover{
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
+  }
+  
+  .card-content{
+    padding: 20px;
+  }
+  
+  .btn{
+    text-align: center;
+    display: inline-block;
+    padding: 8px 16px;
+    width: 100%;
+    background-color: aquamarine;
+    border-radius: 5px;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .btn:hover{
+    opacity: .7;
+  }
