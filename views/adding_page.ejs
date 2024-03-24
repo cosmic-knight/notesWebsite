@@ -25,12 +25,12 @@
 
     <main>
         <% if(form=="book"){ %>
-        <form class="add_form" action="/books-data/add-book" method="post">
+        <form class="add_form" action="/books-data/add-book" method="post" enctype="multipart/form-data">
             <h1>Add Book</h1>
             <span><label for="name">Enter Name: </label><input type="text" name="name" id="name" class="name" required></span>
             <span><label for="author">Enter Author: </label><input type="text" name="author" id="author" class="author" required></span>
             <span><label for="url">Enter Download Link: </label><input type="text" name="url" id="url" class="url" required></span>
-            <span><label for="image">Image: </label><input type="text" name="image" id="image" class="image" required></span>
+            <span><label for="image">Image: </label><input type="file" name="image" id="image" class="image" required></span>
             <span><label for="tags">Tags: </label>
                 <div class="tags_section">
                     <div><input type="checkbox" name="tag" value="python"> Python</div>
@@ -40,6 +40,7 @@
                     <div><input type="checkbox" name="tag" value="linux"> Linux</div>
                     <div><input type="checkbox" name="tag" value="computer networks"> Computer networks</div>
                     <div><input type="checkbox" name="tag" value="AI"> AI</div>
+                    <div><input type="checkbox" name="tag" value="c"> C</div>
                 </div>
             </span>
             <button class="add">Add</button>

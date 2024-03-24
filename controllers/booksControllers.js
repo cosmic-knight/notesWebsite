@@ -9,12 +9,12 @@ const getBook = async (req, res) => {
 }
 
 const addBook = async (req, res) => {
-    const { name, author, url, image, tag } = req.body
+    const { name, author, url, tag } = req.body
     const newBook = Book({
         name: name,
         author: author,
         url: url,
-        img: image,
+        img: `upload_images/${req.file.filename}`,
         tags: tag,
     })
     await newBook.save()
