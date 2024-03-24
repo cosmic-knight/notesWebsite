@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/books.css">
+</head>
+<body class="no-scrol"><br><br><br>
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/books">Books</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/forum">Forum</a></li>
+            <% if(user==""){ %>
+                <li class="log"><a href="/login">Login</a></li>
+            <% }else{ %>
+                <div class="userinfo">
+                    <span><%- user %></span>
+                    <span><a href="/users/logout">Logout</a></span>
+                </div>
+            <% } %>
+        </ul>
+    </nav>
+
+    <div class="search__section">
+        <form action="/books" method="get" class="search_filter">
+            <input type="text" name="name" placeholder="Enter Book Name">
+            <button type="submit">Search</button>
+        </form>
+        <% if(position=="Admin"){ %>
+            <div class="add__section"><a href="/add_data?form=book">Add book</a></div>
+        <% } %>
+    </div>
+
+    <main>
+        <div class="card-container">
+            <% for(let i=0; i<bookdata.length; i++){ %>
+                <div class="card">
+                    <img src="<%- bookdata[i].img %>">
+                    <div class="card-content">
+                        <h4><%- bookdata[i].name %></h4>
+                        <p>Author: <%- bookdata[i].author %></p>
+                        <a href="<%- bookdata[i].url %>" class="btn">Download</a>
+                    </div>
+                </div>
+            <% } %>
+            
+        </div>
+    </main>
+
+    <footer class="foot">
+        <ul>
+            <li><a href="hand.html">2handbooks</a></li>
+            <li><a href="portfolio.html">instagram</a></li>
+            <li><a href="freelance.html">freelance</a></li>
+            <li><a href="https://github.com/cosmic-knight">github</a></li>
+            <li class="log"><a href="mailto:debnathsaiket53@gmail.com">Contact</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

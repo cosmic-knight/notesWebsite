@@ -1,0 +1,1 @@
+To search using tag arrayy in mongodb : https://www.mongodb.com/docs/manual/tutorial/query-arrays/ 

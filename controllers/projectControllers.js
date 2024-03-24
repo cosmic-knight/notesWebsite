@@ -1,11 +1,16 @@
-const getProjects = (req, res)=>{
+const getProjects = (req, res) => {
     // res.json({message: "get projects"})
     res.redirect("/project")
 }
 
-const getSingleProject = (req, res)=>{
+const getSingleProject = (req, res) => {
     const id = req.params.id
-    res.json({message: "get Single Project", id: id})
+    res.json({ message: "get Single Project", id: id })
 }
 
-module.exports = {getProjects, getSingleProject}
+const addProject = async (req, res) => {
+    console.log(req.body)
+    res.redirect("/add_data")
+}
+
+module.exports = { getProjects, getSingleProject, addProject }

@@ -5,6 +5,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    position: {
+        type: String,
+        default: "User",
+    },
     email: {
         type: String,
         required: true,

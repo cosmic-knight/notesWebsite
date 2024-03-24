@@ -5,6 +5,9 @@ const bookSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    author: {
+        type: String,
+    },
     url: {
         type: String,
         required: true,

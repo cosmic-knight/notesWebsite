@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    overflow-y: scroll;
+}
+
+main{
+    margin: 20px 20px 50px 20px;
+}
+
+.no-scrol::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar ul{
+    position: fixed;
+    width: 100%;
+    list-style: none;
+    background-color: #9b7fe9;
+    top:0;
+    overflow: hidden;
+}
+
+.navbar a{
+    color: rgb(255, 252, 252);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: rgb(140, 233, 64);
+}
+
+.navbar li{
+    float: left;
+}
+
+.userinfo{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.log{
+    position: fixed;
+    right: 0;
+}
+
+.add_form{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin: 10px auto;
+    padding: 10px;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid black;
+}
+.add_form span{
+    font-size: 24px;
+    font-weight: 300;
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+}
+.add_form input{
+    font-size: 18px;
+    padding: 5px;
+    font-weight: 300;
+}
+.add_form button{
+    font-size: 19px;
+    padding: 10px 20px;
+    font-weight: 300;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.tags_section, .stream_section, .year_section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0 10px;
+    gap: 20px;
+}
+
+.foot ul{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    list-style: none;
+    background-color: #9b7fe9;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.foot a{
+    color: rgb(255, 252, 252);
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+    text-align: center;
+}
+
+.foot a:hover{
+    background-color: rgb(140, 233, 64);
+}
+
+.foot li{
+    float: left;
+}
+
+.cont{
+    position: relative;
+    left: 74%;
+}

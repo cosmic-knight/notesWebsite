@@ -43,6 +43,33 @@ main{
     float: left;
 }
 
+.userinfo{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.search__section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.add__section a{
+    text-decoration: none;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-weight: 300;
+    padding: 10px 20px;
+}
+
 .log{
     position: fixed;
     right: 0;
@@ -52,7 +79,7 @@ main{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 140px;
 }
 
@@ -114,9 +141,21 @@ main{
 	text-align: center;
 }
 
-.search_filter input, .search_filter button{
+.search_filter input{
+    border: 1px solid lightgray;
 	font-size: 24px;
-	font-weight: 100;
+	font-weight: 300;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+.search_filter button{
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-weight: 300;
+    padding: 7px 20px;
 }
 
 .foot ul{

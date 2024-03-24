@@ -13,11 +13,11 @@ const projectSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    stream: {
+    description: {
         type: String,
         required: true,
     },
-    year: {
+    langauge: {
         type: String,
         required: true,
     },
