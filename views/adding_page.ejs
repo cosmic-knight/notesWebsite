@@ -47,10 +47,11 @@
         </form>
         <% }else if(form=="note"){ %>
         <form class="add_form" action="/notes-data/add-note" method="post">
-            <h1>Add Notes</h1>
+            <h1>Add Notes and Practicals</h1>
             <span><label for="name">Enter Name: </label><input type="text" name="name" id="name" class="name" required></span>
-            <span><label for="url">Enter Download Link: </label><input type="text" name="url" id="url" class="url" required></span>
-            <span><label for="image">Image: </label><input type="file" name="image" id="image" class="image" required></span>
+            <span><label for="notesUrl">Enter notes Download Link: </label><input type="text" name="notesUrl" id="url" class="url" required></span>
+            <span><label for="practicalUrl">Enter practical Download Link: </label><input type="text" name="practicalUrl" id="url" class="url" required></span>
+            <span><label for="referenceUrl">Enter reference Link: </label><input type="text" name="referenceUrl" id="url" class="url" required></span>
             <span><label for="streams">Stream: </label>
                 <div class="stream_section">
                     <div><input type="radio" name="stream" value="cs"> Computer Science</div>

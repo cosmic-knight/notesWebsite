@@ -5,11 +5,15 @@ const notesSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    url: {
+    notesUrl: {
         type: String,
         required: true,
     },
-    img: {
+    practicalUrl: {
+        type: String,
+        required: true,
+    },
+    referenceUrl: {
         type: String,
         required: true,
     },

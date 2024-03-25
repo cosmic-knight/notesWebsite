@@ -34,7 +34,15 @@
                 <th>Practical Files</th>
                 <th>Reference book</th>
             </tr>
-            <tr>
+            <% for(let i=0; i<notesdata?.fy.length; i++){ %>
+                <tr>
+                    <td><%- notesdata?.fy[i].name %> : <a href="<%- notesdata?.fy[i].notesUrl %>">Notes</a></td>
+                    <td><%- notesdata?.fy[i].name %> : <a href="<%- notesdata?.fy[i].practicalUrl %>">Practical</a></td>
+                    <td><%- notesdata?.fy[i].name %> : <a href="/books?name=<%- notesdata?.fy[i].referenceUrl %>">Reference</a></td>
+                </tr>
+            <% } %>
+
+            <!-- <tr>
                 <td>Notes</td>
                 <td>Practical Files</td>
                 <td>Reference book</td>
@@ -43,7 +51,7 @@
                 <td>Notes</td>
                 <td>Practical Files</td>
                 <td>Reference book</td>
-            </tr>
+            </tr> -->
         </table>
 
         <br><br>
@@ -55,16 +63,18 @@
                 <th>Practical Files</th>
                 <th>Reference book</th>
             </tr>
-            <tr>
+            <% for(let i=0; i<notesdata?.sy.length; i++){ %>
+                <tr>
+                    <td><%- notesdata?.sy[i].name %> : <a href="<%- notesdata?.sy[i].notesUrl %>">Notes</a></td>
+                    <td><%- notesdata?.sy[i].name %> : <a href="<%- notesdata?.sy[i].practicalUrl %>">Practical</a></td>
+                    <td><%- notesdata?.sy[i].name %> : <a href="/books?name=<%- notesdata?.sy[i].referenceUrl %>">Reference</a></td>
+                </tr>
+            <% } %>
+            <!-- <tr>
                 <td>Notes</td>
                 <td>Practical Files</td>
                 <td>Reference book</td>
-            </tr>
-            <tr>
-                <td>Notes</td>
-                <td>Practical Files</td>
-                <td>Reference book</td>
-            </tr>
+            </tr> -->
         </table>
 
         <br><br>
@@ -76,16 +86,18 @@
                 <th>Practical Files</th>
                 <th>Reference book</th>
             </tr>
-            <tr>
+            <% for(let i=0; i<notesdata?.ty.length; i++){ %>
+                <tr>
+                    <td><%- notesdata?.ty[i].name %> : <a href="<%- notesdata?.ty[i].notesUrl %>">Notes</a></td>
+                    <td><%- notesdata?.ty[i].name %> : <a href="<%- notesdata?.ty[i].practicalUrl %>">Practical</a></td>
+                    <td><%- notesdata?.ty[i].name %> : <a href="/books?name=<%- notesdata?.ty[i].referenceUrl %>">Reference</a></td>
+                </tr>
+            <% } %>
+            <!-- <tr>
                 <td>Notes</td>
                 <td>Practical Files</td>
                 <td>Reference book</td>
-            </tr>
-            <tr>
-                <td>Notes</td>
-                <td>Practical Files</td>
-                <td>Reference book</td>
-            </tr>
+            </tr> -->
         </table>
     </main>
 

@@ -10,6 +10,7 @@ const booksRoute = require("./routes/booksRoutes")
 const notesRoute = require("./routes/notesRoutes")
 const projectRoute = require("./routes/projectRoutes")
 const { Book } = require("./models/booksModel")
+const { Notes } = require("./models/notesModel")
 
 dotenv.config()
 const app = express()
@@ -61,14 +62,30 @@ app.get("/books", async (req, res) => {
     res.render("books", { user: user, position: position, bookdata })
 })
 
-app.get("/notes", (req, res) => {
+app.get("/notes", async (req, res) => {
     let data = req.cookies?.accesstoken && JSON.parse(req.cookies?.accesstoken)
     let user = data?.username
     let position = data?.position
+    let stream = req.query.stream || ""
+    let notesdata = {}
     if (!user) {
         user = ""
     }
-    res.render("notes", { user: user, position: position })
+    if (stream) {
+        notesdata.fy = await Notes.find({
+            ...(stream && { stream: stream }),
+            year: "fy",
+        })
+        notesdata.sy = await Notes.find({
+            ...(stream && { stream: stream }),
+            year: "sy",
+        })
+        notesdata.ty = await Notes.find({
+            ...(stream && { stream: stream }),
+            year: "ty",
+        })
+    }
+    res.render("notes", { user: user, position: position, notesdata: notesdata })
 })
 
 app.get("/projects", (req, res) => {
