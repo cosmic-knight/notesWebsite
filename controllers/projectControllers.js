@@ -1,3 +1,5 @@
+const { Project } = require("../models/projectsModel")
+
 const getProjects = (req, res) => {
     // res.json({message: "get projects"})
     res.redirect("/project")
@@ -9,8 +11,18 @@ const getSingleProject = (req, res) => {
 }
 
 const addProject = async (req, res) => {
-    console.log(req.body)
-    res.redirect("/add_data")
+    const { name, url, desc, technology } = req.body;
+
+    const newProject = Project({
+        name: name,
+        url: url,
+        description: desc,
+        technology: technology,
+    })
+
+    await newProject.save()
+
+    res.redirect("/add_data?form=project")
 }
 
 module.exports = { getProjects, getSingleProject, addProject }

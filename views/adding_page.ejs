@@ -73,15 +73,21 @@
             <h1>Add Project</h1>
             <span><label for="name">Enter Name: </label><input type="text" name="name" id="name" class="name" required></span>
             <span><label for="url">Enter Download Link: </label><input type="text" name="url" id="url" class="url" required></span>
-            <span><label for="image">Image: </label><input type="file" name="image" id="image" class="image" required></span>
             <span><label for="desc">Description: </label>
                 <input type="text" name="desc" class="desc" required>
             </span>
-            <span><label for="year">Language: </label>
+            <span><label for="year">Technology used: </label>
                 <div class="year_section">
-                    <div><input type="radio" name="language" value="python"> python</div>
-                    <div><input type="radio" name="language" value="javascript"> javascript</div>
-                    <div><input type="radio" name="language" value="java"> java</div>
+                    <div><input type="checkbox" name="technology" value="python"> python</div>
+                    <div><input type="checkbox" name="technology" value="javascript"> javascript</div>
+                    <div><input type="checkbox" name="technology" value="java"> java</div>
+                    <div><input type="checkbox" name="technology" value="html"> html</div>
+                    <div><input type="checkbox" name="technology" value="css"> css</div>
+                    <div><input type="checkbox" name="technology" value="react"> react</div>
+                    <div><input type="checkbox" name="technology" value="nodejs"> nodejs</div>
+                    <div><input type="checkbox" name="technology" value="php"> php</div>
+                    <div><input type="checkbox" name="technology" value="mongodb"> mongodb</div>
+                    <div><input type="checkbox" name="technology" value="sql"> sql</div>
                 </div>
             </span>
             <button class="add">Add</button>

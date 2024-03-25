@@ -27,27 +27,29 @@
     <main>
 	<div class="container">
 		<div class="sidebar">
-			<a href="#python" class="a">Python</a>
-			<a href="#iot" class="a">IOT</a>
-			<a href="#web" class="a">Web</a>
-			<a href="#java" class="a">Java</a>
-			<a href="#android" class="a">Android</a>
-			<a href="#others" class="a">Others</a>
+			<a href="/projects?technology=python" class="a">Python</a>
+			<a href="/projects?technology=iot" class="a">IOT</a>
+			<a href="/projects?technology=react" class="a">React</a>
+			<a href="/projects?technology=nodejs" class="a">Nodejs</a>
+			<a href="/projects?technology=android" class="a">Android</a>
 		</div>
 
 		<div class="content">
 			<% if(position == "Admin"){ %>
 				<div class="add__section"><a href="/add_data?form=project">Add Project</a></div>
 			<% } %>
-			<div class="card">
-				<div class="card-content">
-					<h2>Name: </h2>
-					<p>Desription:</p>
-					<a href="link"><div class="btn">View</div></a>
-				</div>
-			</div>
 
+			<% for(let i=0; i<projectdata.length; i++){ %>
 			<div class="card">
+				<div class="card-content">
+					<h2>Name: <%- projectdata[i].name %></h2>
+					<p>Description: <%- projectdata[i].description %></p>
+					<a href="<%- projectdata[i].url %>"><div class="btn">Download</div></a>
+				</div>
+			</div>
+			<% } %>
+
+			<!-- <div class="card">
 				<div class="card-content">
 					<h2>Name: </h2>
 					<p>Desription:</p>
@@ -85,7 +87,7 @@
 					<p>Desription:</p>
 					<a href="link"><div class="btn">View</div></a>
 				</div>
-			</div>
+			</div> -->
 		</div>
     </main>
 

@@ -11,6 +11,7 @@ const notesRoute = require("./routes/notesRoutes")
 const projectRoute = require("./routes/projectRoutes")
 const { Book } = require("./models/booksModel")
 const { Notes } = require("./models/notesModel")
+const { Project } = require("./models/projectsModel")
 
 dotenv.config()
 const app = express()
@@ -88,14 +89,21 @@ app.get("/notes", async (req, res) => {
     res.render("notes", { user: user, position: position, notesdata: notesdata })
 })
 
-app.get("/projects", (req, res) => {
+app.get("/projects", async (req, res) => {
     let data = req.cookies?.accesstoken && JSON.parse(req.cookies?.accesstoken)
     let user = data?.username
     let position = data?.position
+    let technology = req.query.technology || ""
+    let projectdata = {}
     if (!user) {
         user = ""
     }
-    res.render("project", { user: user, position: position })
+
+    projectdata = await Project.find({
+        ...(technology && { technology: technology }),
+    })
+
+    res.render("project", { user: user, position: position, projectdata: projectdata })
 })
 
 app.get("/add_data", (req, res) => {
